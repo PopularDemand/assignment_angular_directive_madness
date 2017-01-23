@@ -8,17 +8,29 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
     <script src="app.js"></script>
     <script src="shared/nav/mainNav.js"></script>
+    <script src="shared/header/mainHeader.js"></script>
+    <script src="shared/copyright/copyright.js"></script>
   </head>
   <body>
     <main-nav></main-nav>
-    <form>
-      <input type="radio" value="1" ng-model="radios">1</input>
-      <input type="radio" value="2" ng-model="radios">2</input>
-      <input type="radio" value="3" ng-model="radios">3</input>
-      <input type="radio" value="4" ng-model="radios">4</input>
-      <input type="radio" value="5" ng-model="radios">5</input>
 
-      <input type="Submit">Ship it!</input>
-    </form>
+    <main-header>Warmups</main-header>
+
+    <div class="well">
+      <p ng-if="!radios">No number selected.</p>
+      <p ng-show="radios % 2 === 0">Number selected is even</p>
+      <p ng-show="radios % 2 === 1">Number selected is odd</p>
+      <p ng-show="radios">The number selected is {{ radios }}</p>
+      
+      <form>
+        <input type="radio" value="1" ng-model="radios">1</input>
+        <input type="radio" value="2" ng-model="radios">2</input>
+        <input type="radio" value="3" ng-model="radios">3</input>
+        <input type="radio" value="4" ng-model="radios">4</input>
+        <input type="radio" value="5" ng-model="radios">5</input>
+      </form>
+    </div>
+
+    <copyright>Salas Incorporated</copyright>
   </body>
 </html>
