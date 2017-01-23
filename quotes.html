@@ -12,13 +12,18 @@
     <script src="shared/copyright/copyright.js"></script>
     <script src="components/quotes/quotesController.js"></script>
     <script src="components/quotes/form/quoteForm.js"></script>
-  </head>
+    <script src="components/quotes/index/quotesIndex.js"></script>
   </head>
   <body ng-controller="QuotesCtrl">
     <main-nav></main-nav>
     <main-header>Quotes</main-header>
+
     <quote-form></quote-form>
-    <quotes-index ng-repeat="quote in quotes"></quotes-index>
+
+    <ul>
+      <quotes-index ng-repeat="quote in quotes" quote="quote"></quotes-index>
+    </ul>
+
     <copyright>Salas Incorporated</copyright>
   </body>
 </html>

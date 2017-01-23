@@ -1,5 +1,14 @@
 <form action="#" class="quote-form">
-  <input type="text" name="quoteMessage">
-  <input type="text" name="quoteAuthor">
-  <input type="submit" class="btn btn-info" value="New Quote">
+  <input type="text"
+         name="quoteMessage"
+         placeholder="Message"
+         ng-model="quoteMessage">
+  <input type="text"
+         name="quoteAuthor"
+         placeholder="Author"
+         ng-model="quoteAuthor">
+  <input type="submit"
+         class="btn btn-info"
+         value="New Quote"
+         ng-click="createQuote()">
 </form>
