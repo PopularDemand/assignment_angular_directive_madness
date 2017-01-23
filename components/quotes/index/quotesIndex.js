@@ -3,9 +3,10 @@ app.directive("quotesIndex", function(){
 
   return {
     templateUrl: "components/quotes/index/quotesIndex.html",
-    restrict: "E",
+    restrict: "AE",
     scope: {
-      quote: "@"
+      quoteMessage: '@',
+      quoteAuthor: '@'
     }
   };
 

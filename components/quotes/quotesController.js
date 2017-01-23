@@ -3,20 +3,17 @@ app.controller("QuotesCtrl",
   ["$scope",
     function($scope){
 
-      var id = 1;
+      $scope.quoteParams = {};
 
-      $scope.quotes = [];
+      $scope.quotes = [{
+        message: "where's the beef?",
+        author: "Wendy"
+      }];
 
       $scope.createQuote = function(){
-        event.preventDefault();
         var quote = {};
-        quote.id = id;
-        quote.message = $scope.quoteMessage;
-        quote.author = $scope.quoteAuthor;
+        quote.message = $scope.quoteParams.message;
+        quote.author = $scope.quoteParams.author;
         $scope.quotes.push(quote);
-
-console.log(quote);
-
-        id++;
       };
 }]);

@@ -18,10 +18,12 @@
     <main-nav></main-nav>
     <main-header>Quotes</main-header>
 
+    {{ quotes }}
+
     <quote-form></quote-form>
 
     <ul>
-      <quotes-index ng-repeat="quote in quotes" quote="quote"></quotes-index>
+    <li quotes-index ng-repeat="quote in quotes" quote-message="{{ quote.message }}" quote-author="{{ quote.author }}"></li>
     </ul>
 
     <copyright>Salas Incorporated</copyright>
