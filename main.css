@@ -10,3 +10,7 @@
 .ng-pristine {
   border: 2px solid grey;
 }
+
+.red-text {
+  color: red;
+}

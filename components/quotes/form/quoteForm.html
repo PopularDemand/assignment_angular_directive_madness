@@ -1,17 +1,20 @@
-<form class="quote-form" >
+<form class="quote-form" name="newQuote" >
   <input type="text"
          name="quoteMessage"
          placeholder="Message"
          ng-minlength="2"
          ng-model="quoteParams.message">
+  <p class="red-text" ng-if="newQuote.quoteMessage.$invalid && newQuote.quoteMessage.$dirty">The message must be longer than 2 characters.</p>
   <input type="text"
          name="quoteAuthor"
          placeholder="Author"
          ng-minlength="2"
          ng-maxlength="32"
          ng-model="quoteParams.author">
+  <p class="red-text" ng-if="newQuote.quoteAuthor.$invalid && newQuote.quoteAuthor.$dirty">The author name must be between 2 and 32 characters.</p>
   <input type="submit"
          class="btn btn-info"
          value="New Quote"
-         ng-click="createQuote()">
+         ng-hide="newQuote.$invalid"
+         ng-click="createQuote(newQuote.$valid, newQuote)">
 </form>
