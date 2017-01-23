@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Quotes</title>
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
     <script src="app.js"></script>
     <script src="shared/nav/mainNav.js"></script>
@@ -18,12 +19,16 @@
     <main-nav></main-nav>
     <main-header>Quotes</main-header>
 
-    {{ quotes }}
-
     <quote-form></quote-form>
 
     <ul>
-    <li quotes-index ng-repeat="quote in quotes" quote-message="{{ quote.message }}" quote-author="{{ quote.author }}"></li>
+      <li ng-if="!quotes.length">No quotes</li>
+      <li quotes-index
+        ng-repeat="quote in quotes"
+        quote="quote"
+        quote-message="{{ quote.message }}"
+        quote-author="{{ quote.author }}"
+        quotes="quotes"></li>
     </ul>
 
     <copyright>Salas Incorporated</copyright>

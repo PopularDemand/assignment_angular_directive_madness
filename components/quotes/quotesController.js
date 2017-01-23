@@ -5,10 +5,7 @@ app.controller("QuotesCtrl",
 
       $scope.quoteParams = {};
 
-      $scope.quotes = [{
-        message: "where's the beef?",
-        author: "Wendy"
-      }];
+      $scope.quotes = [];
 
       $scope.createQuote = function(){
         var quote = {};
@@ -16,4 +13,5 @@ app.controller("QuotesCtrl",
         quote.author = $scope.quoteParams.author;
         $scope.quotes.push(quote);
       };
+
 }]);

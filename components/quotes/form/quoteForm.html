@@ -2,10 +2,13 @@
   <input type="text"
          name="quoteMessage"
          placeholder="Message"
+         ng-minlength="2"
          ng-model="quoteParams.message">
   <input type="text"
          name="quoteAuthor"
          placeholder="Author"
+         ng-minlength="2"
+         ng-maxlength="32"
          ng-model="quoteParams.author">
   <input type="submit"
          class="btn btn-info"
