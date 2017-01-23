@@ -10,6 +10,8 @@
     <script src="shared/nav/mainNav.js"></script>
     <script src="shared/header/mainHeader.js"></script>
     <script src="shared/copyright/copyright.js"></script>
+    <script src="shared/colorize/colorize.js"></script>
+    <script src="shared/mouseTracker/mouseTracker.js"></script>
   </head>
   <body>
     <main-nav></main-nav>
@@ -21,7 +23,7 @@
       <p ng-show="radios % 2 === 0">Number selected is even</p>
       <p ng-show="radios % 2 === 1">Number selected is odd</p>
       <p ng-show="radios">The number selected is {{ radios }}</p>
-      
+
       <form>
         <input type="radio" value="1" ng-model="radios">1</input>
         <input type="radio" value="2" ng-model="radios">2</input>
@@ -30,6 +32,10 @@
         <input type="radio" value="5" ng-model="radios">5</input>
       </form>
     </div>
+
+    <mouse-tracker></mouse-tracker>
+
+    <div colorize color="blue" background="red">Text</div>
 
     <copyright>Salas Incorporated</copyright>
   </body>
